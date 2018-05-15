@@ -45,6 +45,7 @@ use function Deployer\Support\array_merge_alternate;
  * @property Collection config
  * @property Rsync rsync
  * @property Ssh\Client sshClient
+ * @property Ftp\Client ftpClient
  * @property ProcessRunner processRunner
  * @property Task\ScriptManager scriptManager
  * @property Host\HostSelector hostSelector
@@ -102,6 +103,9 @@ class Deployer extends Container
         };
         $this['sshClient'] = function ($c) {
             return new Ssh\Client($c['output'], $c['pop'], $c['config']['ssh_multiplexing']);
+        };
+        $this['ftpClient'] = function ($c) {
+            return new Ftp\Client();
         };
         $this['rsync'] = function ($c) {
             return new Rsync($c['pop']);

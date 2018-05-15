@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "112321f3a7b05ab4cba5042c398ac1c4",
+    "content-hash": "7897ca3c1cf35b3eea091fe47dd43fbe",
     "packages": [
         {
             "name": "deployer/phar-update",
@@ -61,6 +61,49 @@
                 "update"
             ],
             "time": "2018-02-27T17:29:10+00:00"
+        },
+        {
+            "name": "marvinjanssen/magicmounter",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MarvinJanssen/magicmounter.git",
+                "reference": "32b9fbd9d8fd72d8164481293bbdcaabe60096aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MarvinJanssen/magicmounter/zipball/32b9fbd9d8fd72d8164481293bbdcaabe60096aa",
+                "reference": "32b9fbd9d8fd72d8164481293bbdcaabe60096aa",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/magicmounter.php"
+                ],
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marvin Janssen",
+                    "homepage": "http://marvinjanssen.me"
+                }
+            ],
+            "description": "PHP stream wrapper library to magically mount local or remote filesystems.",
+            "homepage": "https://github.com/marvinjanssen/magicmounter",
+            "keywords": [
+                "fs",
+                "ftp",
+                "ftps",
+                "php"
+            ],
+            "time": "2017-11-27T13:58:07+00:00"
         },
         {
             "name": "pimple/pimple",

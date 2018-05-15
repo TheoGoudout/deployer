@@ -299,6 +299,9 @@ function run($command, $options = [])
     if ($host instanceof Localhost) {
         $process = Deployer::get()->processRunner;
         $output = $process->run($hostname, $command, $options);
+    } else if (!$host->getConfig()->get('ssh')) {
+        $client = Deployer::get()->ftpClient;
+        $output = $client->run($host, $command, $options);
     } else {
         $client = Deployer::get()->sshClient;
         $output = $client->run($host, $command, $options);
